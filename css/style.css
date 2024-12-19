@@ -1,102 +1,123 @@
-*{
-    margin: 0;
+
+
+body, main, h4, p{
     padding: 0;
-    font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans','Droid Sans','Helvetica Neue',sans-serif;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+body{
+    background-color: rgb(139, 30, 130);
 }
 
-header{
-    background-color: black;
-    width: 100%;
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.wrapper{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 1000px;
-    height: 100px;
-    color: white;
-}
-.wrapper h1{
-    width: 190px;
-    margin: 10px auto;
-    font-size: 40px;
-}
-.wrapper h1 span{
-   color: #2452e8;
-}
-
-#tests{
-    margin: 0 auto;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-}
-#tests main{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    background-color: #3a4e91;
-    color: white;
-    font-size: 100px;
-    position: relative;
-}
-
-#card-test h3{
-    position: relative;
-    height: 150px;
-    z-index: 2;
-}
-#tests #card-test::after{
-    content: '';
-    width: 3px;
-    height: 100%;
-    position: absolute;
-    background-color: transparent;
-    z-index: 1;
-    
-}
-aside{
-    background-color: #0d2c94;
-    width: 460px;
-    padding: 0 20px;
-    overflow-y: scroll;
-}
-
-aside h5{
-    color: white;
-    margin: 5px;
-    font-size: 40px;
-    justify-self: center;
-}
-aside p{
-    color: white;
-    width: 100%;
-    height: 40px;
-    font-size: 30px;
-    margin: 10px 0;
-    align-self: center;
-    padding-left: 10px;
-}
-#color, #transitions{
+#circle{
+    height: 300px;
+    width: 500px;
+    background-color: none;
+    border-radius: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 100px auto 0 auto;
 }
-aside input, #delay{
-    margin: 5px 0;
-    border-radius: 20px;
-    padding: 0 5px;
+#time{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    width: 490px;
+    height: 120px;
+    border-radius: 60px;
+    margin: 30px 0;
+}
+
+#hours, #min{
+    font-size: 100px;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+#sec{
+    font-size: 80px;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+#milis{
+    margin: 0;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    color: rgb(104, 104, 104);
+}
+.dots{
+    font-size: 60px;
+}
+#active, #disables{
+    gap: 50px;
+}
+#btns button{
+    border: none;
+    height: 40px;
+    width: 150px;
+    border-radius: 30px;
+    background-color: white;
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+    font-weight: bolder;
+    margin: 5px 5px;
+}
+#btns button:hover{
+    background-color: rgb(183, 25, 204);
+    color: rgb(255, 255, 255);
+    
+}
+#on{
+    display: none;
+}
+#start{
+    display: flex;
+}
+#pause{
+    background-color: rgb(255, 0, 0) !important;
+    color: white !important;
+}
+#pause:hover{
+    background-color: rgb(224, 78, 78) !important;
+}
+#card-list{
+    display: flex;
+    flex-direction: column;
     width: 300px;
-    height: 50px;
-    font-size: 20px;
+    margin: 0 auto;
 }
-aside p:hover{
-    background-color: rgba(0, 0, 0, 0.548);
-    border-radius: 20px;
+.card{
+    background-color: rgb(211, 212, 212);
+    border-radius: 30px;
+    display: flex;
+    gap: 50px;
+    margin: 0 0 15px 0;
 }
+.card main{
+    display: flex;
+    font-size: 30px;
+    gap: 5px;
+}
+.card header{
+    width: 50px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-weight: bolder;
+    font-size: 25px;
+    color: rgb(88, 88, 88);
+}
+.card main #card-sec{
+    font-size: 15px;
+    align-self: center;
+}
+.card main #card-milis{
+    font-size: 10px;
+    height: 10px;
+ }
